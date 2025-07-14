@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// App.tsx
+import React, { useState } from "react";
+import { View, StyleSheet } from "react-native";
+import CategoryScreen from "./screens/CategoryScreen";
+import FlashcardScreen from "./screens/FlashcardScreen";
 
 export default function App() {
+  const [category, setCategory] = useState<string | null>(null);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.appContainer}>
+      {category ? (
+        <FlashcardScreen category={category} onBack={() => setCategory(null)} />
+      ) : (
+        <CategoryScreen onSelectCategory={(cat) => setCategory(cat)} />
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  appContainer: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
