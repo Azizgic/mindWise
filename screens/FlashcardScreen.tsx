@@ -57,6 +57,23 @@ const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
     }
   };
 
+  const handleNext = () => {
+    if (!data.length) return;
+
+    const next = (index + 1) % data.length;
+    setIndex(next);
+    setIsFront(true);
+  };
+
+  const handlePrev = () => {
+    if (!data.length) return;
+
+    const prev = index - 1 < 0 ? data.length - 1 : index - 1;
+
+    setIndex(prev);
+    setIsFront(true);
+  };
+
   if (loading) {
     return (
       <View style={styles.center}>
@@ -70,7 +87,7 @@ const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
       <View style={styles.center}>
         <Text>No data found</Text>
         <Pressable onPress={onBack} style={styles.backBtn}>
-          <Text style={styles.backText}>Back</Text>
+          <Text style={styles.text}>Back</Text>
         </Pressable>
       </View>
     );
@@ -79,7 +96,7 @@ const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
   return (
     <View style={styles.container}>
       <Pressable onPress={onBack} style={styles.backBtn}>
-        <Text style={styles.backText}>← Back</Text>
+        <Text style={styles.text}>← Back</Text>
       </Pressable>
       <Card
         isWord={isFront}
@@ -87,6 +104,15 @@ const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
         displayText={isFront ? data[index].word : data[index].definition}
         onPress={handlePress}
       />
+      <View style={styles.navBtnsContainer}>
+        <Pressable onPress={handlePrev} style={styles.navBtn}>
+          <Text style={styles.text}>Prev</Text>
+        </Pressable>
+
+        <Pressable onPress={handleNext} style={styles.navBtn}>
+          <Text style={styles.text}>Next</Text>
+        </Pressable>
+      </View>
     </View>
   );
 };
@@ -99,7 +125,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#f4f6f8",
     alignItems: "center",
     justifyContent: "center",
-    padding: 20,
+    paddingTop: 60,
+    paddingHorizontal: 20,
   },
   center: {
     flex: 1,
@@ -110,13 +137,26 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 40,
     left: 20,
-    backgroundColor: "#4f46e5",
+    backgroundColor: "#4c51bf",
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 8,
   },
-  backText: {
+  text: {
     color: "#fff",
     fontWeight: "600",
+  },
+  navBtnsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    marginTop: 15,
+  },
+  navBtn: {
+    backgroundColor: "#4c51bf",
+    paddingHorizontal: 50,
+    paddingVertical: 15,
+    borderRadius: 8,
   },
 });

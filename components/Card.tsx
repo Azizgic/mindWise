@@ -21,12 +21,15 @@ const Card: React.FC<Props> = ({ isWord, id, displayText, onPress }) => {
       onPress={onPress}
       style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}
     >
-      <View style={styles.cardData}>
-        <View style={styles.data}>
-          <Text style={styles.word}>{isWord ? "word" : "definition"}</Text>
-          <Text style={styles.id}>{id}</Text>
-        </View>
-        <Text style={styles.display}>{displayText}</Text>
+      <View style={styles.header}>
+        <Text style={styles.typeText}>{isWord ? "word" : "definition"}</Text>
+        <Text style={styles.id}>{id}</Text>
+      </View>
+
+      <View style={styles.content}>
+        <Text style={styles.displayText}>
+          {displayText || "No content available."}
+        </Text>
       </View>
     </Pressable>
   );
@@ -38,58 +41,57 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: "#ffffff",
     borderRadius: 12,
-    paddingVertical: 32,
+    paddingVertical: 24,
     paddingHorizontal: 24,
-    minHeight: 240,
+    minHeight: 220,
     justifyContent: "space-between",
     shadowColor: "#000",
-    shadowOpacity: 0.06,
-    shadowOffset: { width: 0, height: 4 },
-    shadowRadius: 12,
-    elevation: 4,
+    shadowOpacity: 0.08,
+    shadowOffset: { width: 0, height: 6 },
+    shadowRadius: 16,
+    elevation: 6,
     width: "100%",
   },
   cardPressed: {
     shadowOpacity: 0.12,
     shadowOffset: { width: 0, height: 6 },
     shadowRadius: 18,
-    transform: [{ translateY: -0.5 }],
+    transform: [{ translateY: -1 }, { scale: 1.005 }],
+    backgroundColor: "#fafafa",
   },
-  cardData: {
-    flexDirection: "column",
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
-    gap: 24,
-  },
-  data: {
     width: "100%",
-    backgroundColor: "#4f46e5",
-    paddingVertical: 16,
-    paddingHorizontal: 20,
-    borderRadius: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    position: "relative",
+    backgroundColor: "#4c51b5",
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    marginBottom: 20,
   },
-  word: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "#fff",
+  typeText: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: "#e0e7ff",
     textAlign: "center",
   },
   id: {
-    position: "absolute",
-    right: 16,
-    top: "50%",
-    transform: [{ translateY: -2 }],
     fontSize: 12,
     fontWeight: "500",
-    color: "rgba(255,255,255,0.75)",
+    color: "rgba(255,255,255,0.7)",
   },
-  display: {
-    fontSize: 16,
+  content: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 6,
+  },
+  displayText: {
+    fontSize: 20,
     color: "#111827",
     textAlign: "center",
-    paddingTop: 18,
-    paddingHorizontal: 6,
+    lineHeight: 28,
+    fontWeight: "500",
   },
 });
