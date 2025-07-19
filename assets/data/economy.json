@@ -1,0 +1,76 @@
+[
+  {
+    "word": "inflation",
+    "definition": "A general increase in prices and fall in the purchasing value of money."
+  },
+  {
+    "word": "recession",
+    "definition": "A period of economic decline usually marked by a fall in GDP and employment."
+  },
+  {
+    "word": "supply",
+    "definition": "The total amount of a product or service available to consumers."
+  },
+  {
+    "word": "demand",
+    "definition": "The desire and ability of consumers to purchase goods and services."
+  },
+  {
+    "word": "capitalism",
+    "definition": "An economic system where private individuals own and operate businesses for profit."
+  },
+  {
+    "word": "socialism",
+    "definition": "An economic system where the means of production are owned and controlled by the state or the public."
+  },
+  {
+    "word": "investment",
+    "definition": "The act of putting money into something to earn a profit."
+  },
+  {
+    "word": "profit",
+    "definition": "The financial gain made from a business transaction."
+  },
+  {
+    "word": "loss",
+    "definition": "When a business's expenses exceed its revenues."
+  },
+  {
+    "word": "market",
+    "definition": "A system or place where goods and services are bought and sold."
+  },
+  {
+    "word": "trade",
+    "definition": "The exchange of goods and services between people or countries."
+  },
+  { "word": "tariff", "definition": "A tax on imported goods." },
+  {
+    "word": "subsidy",
+    "definition": "A government payment that supports a business or market."
+  },
+  {
+    "word": "monopoly",
+    "definition": "A market structure where a single company dominates the supply of a product or service."
+  },
+  {
+    "word": "budget",
+    "definition": "A plan for managing income and expenses."
+  },
+  {
+    "word": "tax",
+    "definition": "Money collected by the government from individuals or businesses to fund public services."
+  },
+  {
+    "word": "wage",
+    "definition": "Payment received by a worker for their services or labor."
+  },
+  {
+    "word": "interest",
+    "definition": "The cost of borrowing money, usually expressed as a percentage."
+  },
+  {
+    "word": "credit",
+    "definition": "The ability to borrow money or obtain goods with the promise to pay later."
+  },
+  { "word": "debt", "definition": "Money owed to someone else." }
+]

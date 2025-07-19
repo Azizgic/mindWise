@@ -1,0 +1,73 @@
+[
+  {
+    "word": "hypothesis",
+    "definition": "A proposed explanation based on limited evidence, to be tested."
+  },
+  {
+    "word": "theory",
+    "definition": "A well-substantiated explanation of some aspect of the natural world."
+  },
+  {
+    "word": "experiment",
+    "definition": "A scientific procedure to test a hypothesis."
+  },
+  {
+    "word": "variable",
+    "definition": "Any factor, trait, or condition that can exist in differing amounts or types."
+  },
+  {
+    "word": "data",
+    "definition": "Facts and statistics collected for analysis."
+  },
+  {
+    "word": "evidence",
+    "definition": "Information used to support or refute a claim or hypothesis."
+  },
+  {
+    "word": "atom",
+    "definition": "The smallest unit of an element, made up of protons, neutrons, and electrons."
+  },
+  { "word": "molecule", "definition": "Two or more atoms bonded together." },
+  { "word": "energy", "definition": "The ability to do work or cause change." },
+  { "word": "force", "definition": "A push or pull acting upon an object." },
+  {
+    "word": "gravity",
+    "definition": "The force that attracts two bodies toward each other."
+  },
+  {
+    "word": "mass",
+    "definition": "A measure of the amount of matter in an object."
+  },
+  {
+    "word": "acceleration",
+    "definition": "The rate of change of velocity per unit of time."
+  },
+  {
+    "word": "cell",
+    "definition": "The basic structural and functional unit of all living organisms."
+  },
+  {
+    "word": "DNA",
+    "definition": "The molecule that carries genetic information in living organisms."
+  },
+  {
+    "word": "evolution",
+    "definition": "The process by which species change over time through natural selection."
+  },
+  {
+    "word": "photosynthesis",
+    "definition": "The process by which green plants use sunlight to make food."
+  },
+  {
+    "word": "ecosystem",
+    "definition": "A community of living organisms and their environment."
+  },
+  {
+    "word": "reaction",
+    "definition": "A process in which substances change into new substances."
+  },
+  {
+    "word": "radiation",
+    "definition": "The emission of energy as electromagnetic waves or particles."
+  }
+]

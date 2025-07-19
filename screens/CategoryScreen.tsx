@@ -12,7 +12,7 @@ interface Props {
 const CategoryScreen: React.FC<Props> = ({ onSelectCategory }) => {
   const { theme, toggleTheme } = useTheme();
   const styles = getStyles(theme);
-  const categories = ["1984Words", "IELTS"];
+  const categories = ["1984Words", "IELTS", "Politics", "Economy", "Science"];
 
   return (
     <View style={styles.container}>

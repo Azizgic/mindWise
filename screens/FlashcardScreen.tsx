@@ -12,6 +12,10 @@ import ThemeToggle from "../components/ThemeToggle";
 // 👇 Static imports (this is the fix!)
 import data1984 from "../assets/data/1984Words.json";
 import dataIELTS from "../assets/data/IELTS.json";
+import politics from "../assets/data/politics.json";
+import economy from "../assets/data/economy.json";
+import science from "../assets/data/science.json";
+
 import { useTheme } from "../ThemeProvider";
 
 interface WordItem {
@@ -28,6 +32,9 @@ interface Props {
 const dataMap: Record<string, WordItem[]> = {
   "1984Words": data1984,
   IELTS: dataIELTS,
+  Politics: politics,
+  Economy: economy,
+  Science: science,
 };
 
 const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
