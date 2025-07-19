@@ -11,6 +11,7 @@ import Card from "../components/Card";
 // 👇 Static imports (this is the fix!)
 import data1984 from "../assets/data/1984Words.json";
 import dataIELTS from "../assets/data/IELTS.json";
+import { useTheme } from "../ThemeProvider";
 
 interface WordItem {
   word: string;
@@ -29,6 +30,9 @@ const dataMap: Record<string, WordItem[]> = {
 };
 
 const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
+  const { theme, toggleTheme } = useTheme();
+  const styles = getStyles(theme);
+
   const [data, setData] = useState<WordItem[]>([]);
   const [index, setIndex] = useState(0);
   const [isFront, setIsFront] = useState<boolean>(true);
@@ -98,6 +102,12 @@ const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
       <Pressable onPress={onBack} style={styles.backBtn}>
         <Text style={styles.text}>← Back</Text>
       </Pressable>
+      <Pressable onPress={toggleTheme} style={styles.themeToggle}>
+        <Text style={styles.text}>
+          {theme === "dark" ? "🌞 Light" : "🌙 Dark"}
+        </Text>
+      </Pressable>
+
       <Card
         isWord={isFront}
         id={`${index + 1}/${data.length}`}
@@ -119,44 +129,55 @@ const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
 
 export default FlashcardScreen;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#f4f6f8",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingTop: 60,
-    paddingHorizontal: 20,
-  },
-  center: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  backBtn: {
-    position: "absolute",
-    top: 40,
-    left: 20,
-    backgroundColor: "#4c51bf",
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 8,
-  },
-  text: {
-    color: "#fff",
-    fontWeight: "600",
-  },
-  navBtnsContainer: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    width: "100%",
-    marginTop: 15,
-  },
-  navBtn: {
-    backgroundColor: "#4c51bf",
-    paddingHorizontal: 50,
-    paddingVertical: 15,
-    borderRadius: 8,
-  },
-});
+const getStyles = (theme: "light" | "dark") =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: theme === "dark" ? "#121212" : "#f4f6f8",
+      alignItems: "center",
+      justifyContent: "center",
+      paddingTop: 60,
+      paddingHorizontal: 20,
+    },
+    center: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: theme === "dark" ? "#121212" : "#f4f6f8",
+    },
+    backBtn: {
+      position: "absolute",
+      top: 40,
+      left: 20,
+      backgroundColor: theme === "dark" ? "#2a2a3c" : "#4c51b5",
+      paddingHorizontal: 16,
+      paddingVertical: 8,
+      borderRadius: 8,
+    },
+    text: {
+      color: "#fff",
+      fontWeight: "600",
+      fontSize: 16,
+    },
+    navBtnsContainer: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      width: "100%",
+      marginTop: 24,
+    },
+    navBtn: {
+      backgroundColor: theme === "dark" ? "#2a2a3c" : "#4c51b5",
+      paddingHorizontal: 50,
+      paddingVertical: 15,
+      borderRadius: 8,
+    },
+    themeToggle: {
+      position: "absolute",
+      top: 40,
+      right: 20,
+      backgroundColor: theme === "dark" ? "#2a2a3c" : "#4c51b5",
+      paddingHorizontal: 16,
+      paddingVertical: 8,
+      borderRadius: 8,
+    },
+  });
