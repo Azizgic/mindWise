@@ -7,6 +7,7 @@ import {
   Pressable,
 } from "react-native";
 import Card from "../components/Card";
+import ThemeToggle from "../components/ThemeToggle";
 
 // 👇 Static imports (this is the fix!)
 import data1984 from "../assets/data/1984Words.json";
@@ -102,11 +103,9 @@ const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
       <Pressable onPress={onBack} style={styles.backBtn}>
         <Text style={styles.text}>← Back</Text>
       </Pressable>
-      <Pressable onPress={toggleTheme} style={styles.themeToggle}>
-        <Text style={styles.text}>
-          {theme === "dark" ? "🌞 Light" : "🌙 Dark"}
-        </Text>
-      </Pressable>
+      <View style={styles.themeToggle}>
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      </View>
 
       <Card
         isWord={isFront}
@@ -173,11 +172,8 @@ const getStyles = (theme: "light" | "dark") =>
     },
     themeToggle: {
       position: "absolute",
-      top: 40,
-      right: 20,
-      backgroundColor: theme === "dark" ? "#2a2a3c" : "#4c51b5",
+      top: 30,
+      right: 10,
       paddingHorizontal: 16,
-      paddingVertical: 8,
-      borderRadius: 8,
     },
   });

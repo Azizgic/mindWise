@@ -2,6 +2,8 @@
 import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { useTheme } from "../ThemeProvider";
+import { Sun, Moon } from "lucide-react-native";
+import ThemeToggle from "../components/ThemeToggle";
 
 interface Props {
   onSelectCategory: (category: string) => void;
@@ -14,12 +16,9 @@ const CategoryScreen: React.FC<Props> = ({ onSelectCategory }) => {
 
   return (
     <View style={styles.container}>
-      <Pressable onPress={toggleTheme} style={styles.themeToggle}>
-        <Text style={styles.btnText}>
-          {theme === "dark" ? "🌞 Light" : "🌙 Dark"}
-        </Text>
-      </Pressable>
-
+      <View style={styles.themeToggle}>
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      </View>
       {categories.map((cat) => (
         <Pressable
           key={cat}
@@ -47,12 +46,9 @@ const getStyles = (theme: "light" | "dark") =>
 
     themeToggle: {
       position: "absolute",
-      top: 40,
-      right: 20,
-      backgroundColor: theme === "dark" ? "#2a2a3c" : "#4c51b5",
+      top: 30,
+      right: 10,
       paddingHorizontal: 16,
-      paddingVertical: 8,
-      borderRadius: 8,
     },
 
     btn: {

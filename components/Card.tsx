@@ -61,14 +61,14 @@ const getStyles = (theme: "light" | "dark") =>
       shadowOffset: { width: 0, height: 6 },
       shadowRadius: 18,
       transform: [{ translateY: -1 }, { scale: 1.005 }],
-      backgroundColor: theme === "dark" ? "#2a2a2a" : "#f3f4f6",
+      backgroundColor: theme === "dark" ? "#2a2a2a" : "#eee",
     },
     header: {
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
       width: "100%",
-      backgroundColor: theme === "dark" ? "#4f46e5" : "#4338ca",
+      backgroundColor: theme === "dark" ? "#2a2a3c" : "#4c51b5",
       paddingVertical: 12,
       paddingHorizontal: 16,
       borderRadius: 8,
@@ -77,7 +77,7 @@ const getStyles = (theme: "light" | "dark") =>
     typeText: {
       fontSize: 16,
       fontWeight: "700",
-      color: theme === "dark" ? "#ffffff" : "#e0e7ff",
+      color: "#ffffff",
       textAlign: "center",
     },
     id: {
