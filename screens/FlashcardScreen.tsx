@@ -5,9 +5,12 @@ import {
   ActivityIndicator,
   Text,
   Pressable,
+  Platform,
+  Dimensions,
 } from "react-native";
 import Card from "../components/Card";
 import ThemeToggle from "../components/ThemeToggle";
+import { Ionicons } from "@expo/vector-icons";
 
 // 👇 Static imports (this is the fix!)
 import data1984 from "../assets/data/1984Words.json";
@@ -20,6 +23,13 @@ import acronyms from "../assets/data/acronyms.json";
 import gre_words from "../assets/data/gre_words.json";
 
 import { useTheme } from "../ThemeProvider";
+
+const getWidth = () => {
+  if (Platform.OS === "web") {
+    return window.innerWidth;
+  }
+  return Dimensions.get("window").width;
+};
 
 interface WordItem {
   word: string;
@@ -44,8 +54,9 @@ const dataMap: Record<string, WordItem[]> = {
 };
 
 const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
+  const isDesktop = getWidth() > 768;
   const { theme, toggleTheme } = useTheme();
-  const styles = getStyles(theme);
+  const styles = getStyles(theme, isDesktop);
 
   const [data, setData] = useState<WordItem[]>([]);
   const [index, setIndex] = useState(0);
@@ -105,7 +116,11 @@ const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
       <View style={styles.center}>
         <Text>No data found</Text>
         <Pressable onPress={onBack} style={styles.backBtn}>
-          <Text style={styles.text}>Back</Text>
+          <Ionicons
+            name="arrow-back"
+            size={28}
+            color={theme === "dark" ? "#e5e7eb" : "#2a2a3c"}
+          />
         </Pressable>
       </View>
     );
@@ -114,7 +129,11 @@ const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
   return (
     <View style={styles.container}>
       <Pressable onPress={onBack} style={styles.backBtn}>
-        <Text style={styles.text}>← Back</Text>
+        <Ionicons
+          name="arrow-back"
+          size={28}
+          color={theme === "dark" ? "#e5e7eb" : "#2a2a3c"}
+        />
       </Pressable>
       <View style={styles.themeToggle}>
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
@@ -141,7 +160,7 @@ const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
 
 export default FlashcardScreen;
 
-const getStyles = (theme: "light" | "dark") =>
+const getStyles = (theme: "light" | "dark", isDesktop?: boolean) =>
   StyleSheet.create({
     container: {
       flex: 1,
@@ -159,9 +178,8 @@ const getStyles = (theme: "light" | "dark") =>
     },
     backBtn: {
       position: "absolute",
-      top: 40,
+      top: 16,
       left: 20,
-      backgroundColor: theme === "dark" ? "#6495ed" : "#6495ed",
       paddingHorizontal: 16,
       paddingVertical: 8,
       borderRadius: 8,
@@ -174,7 +192,7 @@ const getStyles = (theme: "light" | "dark") =>
     navBtnsContainer: {
       flexDirection: "row",
       justifyContent: "space-between",
-      width: "100%",
+      width: isDesktop ? 400 : "100%",
       marginTop: 24,
     },
     navBtn: {
@@ -185,7 +203,7 @@ const getStyles = (theme: "light" | "dark") =>
     },
     themeToggle: {
       position: "absolute",
-      top: 30,
+      top: 15,
       right: 10,
       paddingHorizontal: 16,
     },

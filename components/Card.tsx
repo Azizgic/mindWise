@@ -7,8 +7,19 @@ import {
   Pressable,
   GestureResponderEvent,
   Animated,
+  Dimensions,
+  Platform,
+  useWindowDimensions,
 } from "react-native";
 import { useTheme } from "../ThemeProvider";
+import { Scale } from "react-native-size-matters";
+
+const getWidth = () => {
+  if (Platform.OS === "web") {
+    return window.innerWidth;
+  }
+  return Dimensions.get("window").width;
+};
 
 interface Props {
   isWord: boolean;
@@ -18,8 +29,9 @@ interface Props {
 }
 
 const Card: React.FC<Props> = ({ isWord, id, displayText, onPress }) => {
-  const { theme, toggleTheme } = useTheme();
-  const styles = getStyles(theme);
+  const isDesktop = getWidth() > 768;
+  const { theme } = useTheme();
+  const styles = getStyles(theme, isDesktop);
 
   const scaleAmin = useRef(new Animated.Value(1)).current;
 
@@ -44,7 +56,7 @@ const Card: React.FC<Props> = ({ isWord, id, displayText, onPress }) => {
 
 export default Card;
 
-const getStyles = (theme: "light" | "dark") =>
+const getStyles = (theme: "light" | "dark", isDesktop?: boolean) =>
   StyleSheet.create({
     card: {
       backgroundColor: theme === "dark" ? "#1a1a1a" : "#ffffff",
@@ -58,7 +70,7 @@ const getStyles = (theme: "light" | "dark") =>
       shadowOffset: { width: 0, height: 6 },
       shadowRadius: 20,
       elevation: 6,
-      width: "100%",
+      width: isDesktop ? 400 : "100%",
     },
     cardPressed: {
       shadowOpacity: theme === "dark" ? 0.35 : 0.12,

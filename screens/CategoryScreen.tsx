@@ -1,17 +1,31 @@
 // screens/CategoryScreen.tsx
 import React from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Pressable,
+  StyleSheet,
+  Platform,
+  Dimensions,
+} from "react-native";
 import { useTheme } from "../ThemeProvider";
-import { Sun, Moon } from "lucide-react-native";
 import ThemeToggle from "../components/ThemeToggle";
+
+const getWidth = () => {
+  if (Platform.OS === "web") {
+    return window.innerWidth;
+  }
+  return Dimensions.get("window").width;
+};
 
 interface Props {
   onSelectCategory: (category: string) => void;
 }
 
 const CategoryScreen: React.FC<Props> = ({ onSelectCategory }) => {
+  const isDesktop = getWidth() > 768;
   const { theme, toggleTheme } = useTheme();
-  const styles = getStyles(theme);
+  const styles = getStyles(theme, isDesktop);
   const categories = [
     "1984Words",
     "IELTS",
@@ -43,28 +57,29 @@ const CategoryScreen: React.FC<Props> = ({ onSelectCategory }) => {
 
 export default CategoryScreen;
 
-const getStyles = (theme: "light" | "dark") =>
+const getStyles = (theme: "light" | "dark", isDesktop?: boolean) =>
   StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: theme === "dark" ? "#121212" : "#f4f6f8",
       alignItems: "center",
       justifyContent: "center",
-      gap: 16,
+      gap: isDesktop ? 16 : 10,
     },
 
     themeToggle: {
       position: "absolute",
-      top: 30,
+      top: 15,
       right: 10,
       paddingHorizontal: 16,
+      paddingBottom: 200,
     },
 
     btn: {
       backgroundColor: theme === "dark" ? "#6495ed" : "#6495ed",
       paddingVertical: 16,
       paddingHorizontal: 52,
-      width: "80%",
+      width: isDesktop ? 400 : "80%",
       borderRadius: 10,
       elevation: 2,
       alignItems: "center",
