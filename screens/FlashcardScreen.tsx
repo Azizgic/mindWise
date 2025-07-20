@@ -15,6 +15,9 @@ import dataIELTS from "../assets/data/IELTS.json";
 import politics from "../assets/data/politics.json";
 import economy from "../assets/data/economy.json";
 import science from "../assets/data/science.json";
+import IR from "../assets/data/IR.json";
+import acronyms from "../assets/data/acronyms.json";
+import gre_words from "../assets/data/gre_words.json";
 
 import { useTheme } from "../ThemeProvider";
 
@@ -35,6 +38,9 @@ const dataMap: Record<string, WordItem[]> = {
   Politics: politics,
   Economy: economy,
   Science: science,
+  IR: IR,
+  Acronyms: acronyms,
+  GRE: gre_words,
 };
 
 const FlashcardScreen: React.FC<Props> = ({ category, onBack }) => {
@@ -155,7 +161,7 @@ const getStyles = (theme: "light" | "dark") =>
       position: "absolute",
       top: 40,
       left: 20,
-      backgroundColor: theme === "dark" ? "#2a2a3c" : "#4c51b5",
+      backgroundColor: theme === "dark" ? "#6495ed" : "#6495ed",
       paddingHorizontal: 16,
       paddingVertical: 8,
       borderRadius: 8,
@@ -172,7 +178,7 @@ const getStyles = (theme: "light" | "dark") =>
       marginTop: 24,
     },
     navBtn: {
-      backgroundColor: theme === "dark" ? "#2a2a3c" : "#4c51b5",
+      backgroundColor: theme === "dark" ? "#6495ed" : "#6495ed",
       paddingHorizontal: 50,
       paddingVertical: 15,
       borderRadius: 8,

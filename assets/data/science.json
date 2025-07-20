@@ -1,73 +1,206 @@
 [
   {
-    "word": "hypothesis",
-    "definition": "A proposed explanation based on limited evidence, to be tested."
+    "word": "Atom",
+    "definition": "The smallest unit of an element that retains the properties of that element."
   },
   {
-    "word": "theory",
-    "definition": "A well-substantiated explanation of some aspect of the natural world."
+    "word": "Molecule",
+    "definition": "A group of atoms bonded together, representing the smallest fundamental unit of a chemical compound."
   },
   {
-    "word": "experiment",
-    "definition": "A scientific procedure to test a hypothesis."
+    "word": "Gravity",
+    "definition": "A force of attraction between objects due to their mass."
   },
   {
-    "word": "variable",
-    "definition": "Any factor, trait, or condition that can exist in differing amounts or types."
+    "word": "Photosynthesis",
+    "definition": "The process by which green plants use sunlight to synthesize foods from carbon dioxide and water."
   },
   {
-    "word": "data",
-    "definition": "Facts and statistics collected for analysis."
-  },
-  {
-    "word": "evidence",
-    "definition": "Information used to support or refute a claim or hypothesis."
-  },
-  {
-    "word": "atom",
-    "definition": "The smallest unit of an element, made up of protons, neutrons, and electrons."
-  },
-  { "word": "molecule", "definition": "Two or more atoms bonded together." },
-  { "word": "energy", "definition": "The ability to do work or cause change." },
-  { "word": "force", "definition": "A push or pull acting upon an object." },
-  {
-    "word": "gravity",
-    "definition": "The force that attracts two bodies toward each other."
-  },
-  {
-    "word": "mass",
-    "definition": "A measure of the amount of matter in an object."
-  },
-  {
-    "word": "acceleration",
-    "definition": "The rate of change of velocity per unit of time."
-  },
-  {
-    "word": "cell",
-    "definition": "The basic structural and functional unit of all living organisms."
+    "word": "Evolution",
+    "definition": "The change in the characteristics of a species over several generations due to natural selection."
   },
   {
     "word": "DNA",
-    "definition": "The molecule that carries genetic information in living organisms."
+    "definition": "Deoxyribonucleic acid; a molecule that carries the genetic instructions used in growth, development, and reproduction."
   },
   {
-    "word": "evolution",
-    "definition": "The process by which species change over time through natural selection."
+    "word": "Velocity",
+    "definition": "The speed of something in a given direction."
   },
   {
-    "word": "photosynthesis",
-    "definition": "The process by which green plants use sunlight to make food."
+    "word": "Acceleration",
+    "definition": "The rate at which an object's velocity changes with time."
   },
   {
-    "word": "ecosystem",
-    "definition": "A community of living organisms and their environment."
+    "word": "Neuron",
+    "definition": "A nerve cell that is the basic building block of the nervous system."
   },
   {
-    "word": "reaction",
-    "definition": "A process in which substances change into new substances."
+    "word": "Quantum",
+    "definition": "The minimum amount of any physical entity involved in an interaction in quantum physics."
   },
   {
-    "word": "radiation",
-    "definition": "The emission of energy as electromagnetic waves or particles."
+    "word": "Hypothesis",
+    "definition": "A proposed explanation for a phenomenon, used as a starting point for further investigation."
+  },
+  {
+    "word": "Ecosystem",
+    "definition": "A biological community of interacting organisms and their physical environment."
+  },
+  {
+    "word": "Thermodynamics",
+    "definition": "The branch of physics that deals with the relationships between heat and other forms of energy."
+  },
+  {
+    "word": "Entropy",
+    "definition": "A measure of the amount of disorder or randomness in a system."
+  },
+  {
+    "word": "Isotope",
+    "definition": "Atoms of the same element that have different numbers of neutrons."
+  },
+  {
+    "word": "Force",
+    "definition": "An interaction that, when unopposed, will change the motion of an object."
+  },
+  {
+    "word": "Mass",
+    "definition": "A measure of the amount of matter in an object."
+  },
+  {
+    "word": "Energy",
+    "definition": "The capacity to do work or produce change."
+  },
+  {
+    "word": "Friction",
+    "definition": "A force that resists the motion of two surfaces sliding against each other."
+  },
+  {
+    "word": "Electricity",
+    "definition": "The flow of electric charge through a conductor."
+  },
+  {
+    "word": "Magnetism",
+    "definition": "A force of attraction or repulsion that acts at a distance due to motion of electric charges."
+  },
+  {
+    "word": "Cell",
+    "definition": "The basic structural, functional, and biological unit of all living organisms."
+  },
+  {
+    "word": "Organism",
+    "definition": "An individual living entity that can react to stimuli, reproduce, grow, and maintain homeostasis."
+  },
+  {
+    "word": "Virus",
+    "definition": "A microscopic infectious agent that replicates only inside the living cells of an organism."
+  },
+  {
+    "word": "Bacteria",
+    "definition": "Single-celled microorganisms that can exist either as independent organisms or as parasites."
+  },
+  {
+    "word": "Gene",
+    "definition": "A sequence of DNA that contains the instructions to make a specific protein or set of proteins."
+  },
+  {
+    "word": "Mutation",
+    "definition": "A change in the DNA sequence that can lead to variations in traits."
+  },
+  {
+    "word": "Nucleus",
+    "definition": "The central part of a cell that contains DNA and controls cell growth and reproduction."
+  },
+  {
+    "word": "Osmosis",
+    "definition": "The movement of water molecules through a semipermeable membrane from low to high solute concentration."
+  },
+  {
+    "word": "Diffusion",
+    "definition": "The passive spread of particles from areas of high concentration to areas of low concentration."
+  },
+  {
+    "word": "Enzyme",
+    "definition": "A biological catalyst that speeds up chemical reactions in living organisms."
+  },
+  {
+    "word": "Acid",
+    "definition": "A substance that donates hydrogen ions (H+) and has a pH less than 7."
+  },
+  {
+    "word": "Base",
+    "definition": "A substance that accepts hydrogen ions (H+) and has a pH greater than 7."
+  },
+  {
+    "word": "pH",
+    "definition": "A measure of how acidic or basic a substance is on a scale from 0 to 14."
+  },
+  {
+    "word": "Periodic Table",
+    "definition": "A tabular arrangement of the chemical elements organized by atomic number and electron configuration."
+  },
+  {
+    "word": "Element",
+    "definition": "A pure substance made of only one kind of atom."
+  },
+  {
+    "word": "Compound",
+    "definition": "A substance made of two or more different elements that are chemically bonded."
+  },
+  {
+    "word": "Mixture",
+    "definition": "A combination of two or more substances that are not chemically bonded."
+  },
+  {
+    "word": "Orbit",
+    "definition": "The path one object in space takes around another due to gravity."
+  },
+  {
+    "word": "Telescope",
+    "definition": "An instrument that collects and magnifies light to observe distant objects in space."
+  },
+  {
+    "word": "Black Hole",
+    "definition": "A region in space where the gravitational field is so strong that nothing, not even light, can escape."
+  },
+  {
+    "word": "Big Bang",
+    "definition": "The scientific theory that the universe originated from a very dense and hot state and has been expanding ever since."
+  },
+  {
+    "word": "Galaxy",
+    "definition": "A large system of stars, gas, and dust bound together by gravity."
+  },
+  {
+    "word": "Meteor",
+    "definition": "A space rock that enters Earth's atmosphere and burns up, often called a shooting star."
+  },
+  {
+    "word": "Plate Tectonics",
+    "definition": "The theory explaining the movement of the Earth's plates and the processes that occur at their boundaries."
+  },
+  {
+    "word": "Earthquake",
+    "definition": "A sudden shaking of the ground caused by the movement of the Earth's tectonic plates."
+  },
+  {
+    "word": "Volcano",
+    "definition": "A mountain that opens downward to a pool of molten rock beneath the Earth's surface."
+  },
+  {
+    "word": "Weathering",
+    "definition": "The breaking down of rocks and minerals by natural forces such as wind, water, and temperature."
+  },
+  {
+    "word": "Erosion",
+    "definition": "The process by which soil and rock are removed from the Earth's surface by wind or water flow."
+  },
+  {
+    "word": "Climate",
+    "definition": "The average weather conditions in an area over a long period."
+  },
+  {
+    "word": "Atmosphere",
+    "definition": "The layer of gases that surrounds a planet, such as Earth."
   }
 ]

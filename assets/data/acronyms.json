@@ -1,0 +1,67 @@
+[
+  { "word": "UN", "definition": "United Nations" },
+  { "word": "NATO", "definition": "North Atlantic Treaty Organization" },
+  { "word": "EU", "definition": "European Union" },
+  { "word": "WTO", "definition": "World Trade Organization" },
+  { "word": "WHO", "definition": "World Health Organization" },
+  { "word": "IMF", "definition": "International Monetary Fund" },
+  { "word": "WB", "definition": "World Bank" },
+  { "word": "NGO", "definition": "Non-Governmental Organization" },
+  { "word": "MNC", "definition": "Multinational Corporation" },
+  { "word": "G7", "definition": "Group of Seven" },
+  { "word": "G20", "definition": "Group of Twenty" },
+  {
+    "word": "OPEC",
+    "definition": "Organization of the Petroleum Exporting Countries"
+  },
+  { "word": "ASEAN", "definition": "Association of Southeast Asian Nations" },
+  { "word": "AU", "definition": "African Union" },
+  { "word": "OAS", "definition": "Organization of American States" },
+  {
+    "word": "OECD",
+    "definition": "Organisation for Economic Co-operation and Development"
+  },
+  { "word": "FATF", "definition": "Financial Action Task Force" },
+  {
+    "word": "UNESCO",
+    "definition": "United Nations Educational, Scientific and Cultural Organization"
+  },
+  {
+    "word": "UNHCR",
+    "definition": "United Nations High Commissioner for Refugees"
+  },
+  {
+    "word": "UNICEF",
+    "definition": "United Nations International Children's Emergency Fund"
+  },
+  { "word": "IAEA", "definition": "International Atomic Energy Agency" },
+  { "word": "ICC", "definition": "International Criminal Court" },
+  { "word": "ICJ", "definition": "International Court of Justice" },
+  { "word": "ILO", "definition": "International Labour Organization" },
+  { "word": "EPA", "definition": "Environmental Protection Agency" },
+  { "word": "GDP", "definition": "Gross Domestic Product" },
+  { "word": "GNP", "definition": "Gross National Product" },
+  { "word": "HDI", "definition": "Human Development Index" },
+  { "word": "PPP", "definition": "Purchasing Power Parity" },
+  { "word": "SDG", "definition": "Sustainable Development Goal" },
+  { "word": "MDG", "definition": "Millennium Development Goal" },
+  { "word": "R&D", "definition": "Research and Development" },
+  { "word": "HR", "definition": "Human Resources" },
+  { "word": "IT", "definition": "Information Technology" },
+  { "word": "AI", "definition": "Artificial Intelligence" },
+  { "word": "ICT", "definition": "Information and Communication Technology" },
+  { "word": "IoT", "definition": "Internet of Things" },
+  { "word": "IPO", "definition": "Initial Public Offering" },
+  { "word": "CEO", "definition": "Chief Executive Officer" },
+  { "word": "CFO", "definition": "Chief Financial Officer" },
+  { "word": "CSR", "definition": "Corporate Social Responsibility" },
+  { "word": "VPN", "definition": "Virtual Private Network" },
+  { "word": "URL", "definition": "Uniform Resource Locator" },
+  { "word": "HTML", "definition": "HyperText Markup Language" },
+  { "word": "PDF", "definition": "Portable Document Format" },
+  { "word": "API", "definition": "Application Programming Interface" },
+  { "word": "GPS", "definition": "Global Positioning System" },
+  { "word": "WIFI", "definition": "Wireless Fidelity" },
+  { "word": "SMS", "definition": "Short Message Service" },
+  { "word": "USB", "definition": "Universal Serial Bus" }
+]

@@ -1,11 +1,12 @@
 // components/Card.tsx
-import React from "react";
+import React, { useRef } from "react";
 import {
   View,
   Text,
   StyleSheet,
   Pressable,
   GestureResponderEvent,
+  Animated,
 } from "react-native";
 import { useTheme } from "../ThemeProvider";
 
@@ -19,6 +20,9 @@ interface Props {
 const Card: React.FC<Props> = ({ isWord, id, displayText, onPress }) => {
   const { theme, toggleTheme } = useTheme();
   const styles = getStyles(theme);
+
+  const scaleAmin = useRef(new Animated.Value(1)).current;
+
   return (
     <Pressable
       onPress={onPress}
@@ -68,7 +72,7 @@ const getStyles = (theme: "light" | "dark") =>
       justifyContent: "space-between",
       alignItems: "center",
       width: "100%",
-      backgroundColor: theme === "dark" ? "#2a2a3c" : "#4c51b5",
+      backgroundColor: theme === "dark" ? "#6495ed" : "#6495ed",
       paddingVertical: 12,
       paddingHorizontal: 16,
       borderRadius: 8,
@@ -85,6 +89,7 @@ const getStyles = (theme: "light" | "dark") =>
       fontWeight: "500",
       color: theme === "dark" ? "#f8fafc" : "#eeeeee",
     },
+
     content: {
       flex: 1,
       justifyContent: "center",
